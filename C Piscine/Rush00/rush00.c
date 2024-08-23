@@ -19,20 +19,21 @@ void    rush00(int x, int y)
     char    newline;
 
     newline = '\n';
-    y = 1;
-    while (y < column)
+    column = 1;
+    while (column < y)
     {
-        while (x < row)
+        row = 1;
+        while (row < 1)
         {
-            if ((y == 1 || column -1) && (x == 1 || x == row - 1)) // corner
+            if ((column == 1 || y - 1) && (row == 1 || row == x - 1)) // corner
             {
                 ft_putchar('o');
             }
-            else if (y == 1 || column -1) // Top & bottom borders
+            else if (column == 1 || y - 1) // Top & bottom borders
             {
                 ft_putchar('-');
             }
-            else if (x == 1 || x == row - 1) //Left & right borders
+            else if (row == 1 || row == x - 1) //Left & right borders
             {
                 ft_putchar('|');
             }
@@ -40,9 +41,9 @@ void    rush00(int x, int y)
             {
                 ft_putchar(' '); // Inside rectangle
             }
-            x++;
+            row++;
         }
         ft_putchar(newline);
-        y++;
+        column++;
     }
 }
