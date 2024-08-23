@@ -23,7 +23,7 @@ void    rush00(int x, int y)
     while (column < y)
     {
         row = 1;
-        while (row < 1)
+        while (row < x)
         {
             if ((column == 1 || y - 1) && (row == 1 || row == x - 1)) // corner
             {
