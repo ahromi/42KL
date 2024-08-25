@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: iahromi <iahromi@student.42kl.edu.my>      +#+  +:+       +#+        */
+/*   By: tstewart <tstewart@student.42kl.edu.m      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/24 03:05:56 by iahromi           #+#    #+#             */
-/*   Updated: 2024/08/24 03:05:56 by iahromi          ###   ########.fr       */
+/*   Created: 2024/08/23 20:03:05 by tstewart          #+#    #+#             */
+/*   Updated: 2024/08/24 21:04:19 by tstewart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void    rush00(int x, int y);
+void	rush01(int x, int y);
 
-int main()
+int	main(void)
 {
-    rush00(5, 1);
-    return (0);
+	rush01(7, 3);
+	return (0);
 }
