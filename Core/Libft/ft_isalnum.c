@@ -6,9 +6,10 @@
 /*   By: iahromi <iahromi@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 15:20:48 by iahromi           #+#    #+#             */
-/*   Updated: 2024/11/08 16:15:32 by iahromi          ###   ########.fr       */
+/*   Updated: 2024/11/11 11:02:06 by iahromi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 int	ft_isalnum(int c)
 {

@@ -6,9 +6,10 @@
 /*   By: iahromi <iahromi@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 16:24:06 by iahromi           #+#    #+#             */
-/*   Updated: 2024/11/08 16:24:08 by iahromi          ###   ########.fr       */
+/*   Updated: 2024/11/11 11:02:53 by iahromi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 int	ft_isprint(int c)
 {

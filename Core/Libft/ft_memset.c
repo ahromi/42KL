@@ -6,10 +6,11 @@
 /*   By: iahromi <iahromi@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 17:54:49 by iahromi           #+#    #+#             */
-/*   Updated: 2024/11/08 18:08:24 by iahromi          ###   ########.fr       */
+/*   Updated: 2024/11/11 11:05:42 by iahromi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stddef.h>
+#include "libft.h"
+
 void	*ft_memset(void *x, int y, size_t len)
 {
 	unsigned char	*tmp;
@@ -22,7 +23,7 @@ void	*ft_memset(void *x, int y, size_t len)
 	}
 	return (x);
 }
-
+/*
 #include <stdio.h>
 
 int	main(void)
@@ -34,3 +35,4 @@ int	main(void)
 
 	return (0);
 }
+*/

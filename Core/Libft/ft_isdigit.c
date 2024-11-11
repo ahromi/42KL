@@ -6,9 +6,10 @@
 /*   By: iahromi <iahromi@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 15:20:25 by iahromi           #+#    #+#             */
-/*   Updated: 2024/11/08 15:55:06 by iahromi          ###   ########.fr       */
+/*   Updated: 2024/11/11 11:01:25 by iahromi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {

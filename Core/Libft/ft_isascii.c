@@ -6,9 +6,10 @@
 /*   By: iahromi <iahromi@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 16:23:47 by iahromi           #+#    #+#             */
-/*   Updated: 2024/11/08 16:23:49 by iahromi          ###   ########.fr       */
+/*   Updated: 2024/11/11 11:02:26 by iahromi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 int	ft_isascii(int c)
 {

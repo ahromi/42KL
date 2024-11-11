@@ -6,7 +6,7 @@
 /*   By: iahromi <iahromi@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 10:54:13 by iahromi           #+#    #+#             */
-/*   Updated: 2024/11/11 10:58:41 by iahromi          ###   ########.fr       */
+/*   Updated: 2024/11/11 11:09:10 by iahromi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,12 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-int	ft_isalpha(int x);
-int	ft_isdigit(int x);
-int	ft_isalnum(int x);
-int	ft_isascii(int x);
-int	ft_isprint(int x);
+int	ft_isalpha(int c);
+int	ft_isdigit(int c);
+int	ft_isalnum(int c);
+int	ft_isascii(int c);
+int	ft_isprint(int c);
+int	ft_strlen(const char *str);
+void	*ft_memset(void *x, int y, size_t len);
 
 #endif
