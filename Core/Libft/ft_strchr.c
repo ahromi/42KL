@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: iahromi <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: iahromi <iahromi@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/11 11:43:43 by iahromi           #+#    #+#             */
-/*   Updated: 2024/11/12 14:49:44 by iahromi          ###   ########.fr       */
+/*   Created: 2024/11/12 15:28:33 by iahromi           #+#    #+#             */
+/*   Updated: 2024/11/14 14:12:05 by iahromi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *x, size_t len)
+char	*ft_strchr(const char *str, int c)
 {
-	char	*tmp;
+	unsigned int	i;
+	unsigned char	cc;
 
-	tmp = (char *) x;
-	while (len > 0)
+	i = 0;
+	cc = (char) c;
+	while (str[i])
 	{
-		*(tmp++) = 0;
-		len--;
+		if (str[i] == cc)
+			return ((char *) &str[i]);
+		i++;
 	}
+	if (str[i] == cc)
+		return ((char *) &str[i]);
+	return (NULL);
 }

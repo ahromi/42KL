@@ -1,35 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iahromi <iahromi@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/08 15:20:48 by iahromi           #+#    #+#             */
-/*   Updated: 2024/11/14 14:00:17 by iahromi          ###   ########.fr       */
+/*   Created: 2024/11/12 19:05:57 by iahromi           #+#    #+#             */
+/*   Updated: 2024/11/14 14:16:33 by iahromi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-int	ft_isalnum(int c)
+int	ft_memcmp(const void *s1, const void *s2, size_t len)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122)
-		|| (c >= 48 && c <= 57))
-		return (1);
+	unsigned char	*str1;
+	unsigned char	*str2;
+	unsigned size_t	i;
+
+	str1 = (unsigned char) *s1;
+	str2 = (unsigned char) *s2;
+	i = 0;
+	while (i < len)
+	{
+		if ((unsigned char) str1[i] != (unsigned char) str2[i])
+			return ((unsigned char) str1[i] - (unsigned char) str2[i]);
+		i++;
+	}
 	return (0);
 }
-/*
-#include <stdio.h>
-int	main(void)
-{
-	char c;
-	
-	printf("Enter a character: ");
-	scanf("%c", &c);
-	if (ft_isalnum(c) == 0)
-		printf("%c is not an alphabet nor a digit.", c);
-	else
-		printf("%c is an alphabet or digit.", c);
-	return 0;
-}
-*/

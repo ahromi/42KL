@@ -1,35 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iahromi <iahromi@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/08 15:20:48 by iahromi           #+#    #+#             */
-/*   Updated: 2024/11/14 14:00:17 by iahromi          ###   ########.fr       */
+/*   Created: 2024/11/12 13:50:51 by iahromi           #+#    #+#             */
+/*   Updated: 2024/11/14 14:03:04 by iahromi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
 
-int	ft_isalnum(int c)
+#include "libtf.h"
+
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122)
-		|| (c >= 48 && c <= 57))
-		return (1);
-	return (0);
-}
-/*
-#include <stdio.h>
-int	main(void)
-{
-	char c;
-	
-	printf("Enter a character: ");
-	scanf("%c", &c);
-	if (ft_isalnum(c) == 0)
-		printf("%c is not an alphabet nor a digit.", c);
+	char	*tmp_dst;
+	char	*tmp_src;
+	size_t	i;
+
+	if (!dst && !src)
+		return (NULL);
+	tmp_dst = (char *) dst;
+	tmp_src = (char *) src;
+	i = 0;
+	if (tmp_dst > tmp_src)
+	{
+		while (len-- > 0)
+			tmp_dst[len] = tmp_src[len];
+	}
 	else
-		printf("%c is an alphabet or digit.", c);
-	return 0;
+	{
+		while (i++ < len)
+			tmp_dst[i] = tmp_src[i];
+	}
+	return (dst);
 }
-*/

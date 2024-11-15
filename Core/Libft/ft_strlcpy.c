@@ -1,35 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iahromi <iahromi@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/08 15:20:48 by iahromi           #+#    #+#             */
-/*   Updated: 2024/11/14 14:00:17 by iahromi          ###   ########.fr       */
+/*   Created: 2024/11/12 14:02:10 by iahromi           #+#    #+#             */
+/*   Updated: 2024/11/12 14:47:46 by iahromi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-int	ft_isalnum(int c)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size_dst)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122)
-		|| (c >= 48 && c <= 57))
-		return (1);
-	return (0);
+	size_t	len_src;
+
+	len_src = ft_strlen(src);
+	if (len_src + 1 < size_dst)
+	{
+		ft_memcpy(dst, src, len_src +1);
+	}
+	else if (dst_size != 0)
+	{
+		ft_memcpy(dst, src, size_dst - 1);
+		dst[size_dst - 1] = 0;
+	}
+	return (len_src);
 }
-/*
-#include <stdio.h>
-int	main(void)
-{
-	char c;
-	
-	printf("Enter a character: ");
-	scanf("%c", &c);
-	if (ft_isalnum(c) == 0)
-		printf("%c is not an alphabet nor a digit.", c);
-	else
-		printf("%c is an alphabet or digit.", c);
-	return 0;
-}
-*/

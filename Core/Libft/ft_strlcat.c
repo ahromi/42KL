@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iahromi <iahromi@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/08 15:20:48 by iahromi           #+#    #+#             */
-/*   Updated: 2024/11/14 14:00:17 by iahromi          ###   ########.fr       */
+/*   Created: 2024/11/12 14:38:06 by iahromi           #+#    #+#             */
+/*   Updated: 2024/11/14 14:04:02 by iahromi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-int	ft_isalnum(int c)
+size_t	ft_strlcat(char *dst, const char *src, size_t size_dst)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122)
-		|| (c >= 48 && c <= 57))
-		return (1);
-	return (0);
-}
-/*
-#include <stdio.h>
-int	main(void)
-{
-	char c;
-	
-	printf("Enter a character: ");
-	scanf("%c", &c);
-	if (ft_isalnum(c) == 0)
-		printf("%c is not an alphabet nor a digit.", c);
+	size_t	len_dst;
+	size_t	len_src;
+
+	len_dst = ft_strlen(dst);
+	len_src = ft_strlen(src);
+	if (len_dst >= size_dst)
+		len_dst = size_dst;
+	if (len_dst == size_dst)
+		return (size_dst + len_src);
+	if (len_src < size_dst - len_dst)
+	{
+		ft_memcpy(dst + len_dst, src, len_src + 1);
+	}
 	else
-		printf("%c is an alphabet or digit.", c);
-	return 0;
+	{
+		dst[size_dst - 1] = '\0';
+	}
+	return (len_dst + len_src);
 }
-*/
