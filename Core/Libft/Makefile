@@ -6,7 +6,7 @@
 #    By: iahromi <iahromi@student.42kl.edu.my>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/16 13:59:29 by iahromi           #+#    #+#              #
-#    Updated: 2024/11/16 14:00:46 by iahromi          ###   ########.fr        #
+#    Updated: 2024/11/16 19:18:10 by iahromi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,6 +47,18 @@ files	= ft_strlen \
 			 ft_putendl_fd \
 			 ft_putnbr_fd \
 
+
+bonus	=	\
+		ft_lstnew \
+		ft_lstadd_front \
+		ft_lstsize \
+		ft_lstlast \
+		ft_lstadd_back \
+		ft_lstdelone \
+		ft_lstclear \
+		ft_lstiter \
+		ft_lstmap
+
 Compiler	= gcc
 
 CmpFlags	= -Wall -Wextra -Werror
@@ -55,7 +67,11 @@ OUTN	= $(Library).a
 
 CFILES	= $(files:%=%.c)
 
+CBONUS 	= $(bonus:%=%.c)
+
 OFILES	= $(files:%=%.o)
+
+OBONUS	= $(bonus:%=%.o)
 
 NAME	= $(OUTN)
 
@@ -63,15 +79,23 @@ $(NAME):
 	$(Compiler) $(CmpFlags) -c $(CFILES) -I./
 	ar -rc $(OUTN) $(OFILES)
 
-all: $(NAME)
+all: bonus $(NAME)
 
-clean:
+bonus:
+	$(Compiler) $(CmpFlags) -c $(CBONUS) -I./
+	ar -rc $(OUTN) $(OBONUS)
+
+clean:	bclean
 	rm -f $(NAME)
 	rm -f $(OFILES)
 
 fclean: clean
 	rm -f $(NAME)
 
+bclean:
+	rm -f $(NAME)
+	rm -f $(OBONUS)
+
 re: fclean all
 
-.PHONY: all, clean, fclean, re
+.PHONY: all, clean, fclean, re, bonus, bclean
