@@ -6,11 +6,13 @@
 /*   By: iahromi <iahromi@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 13:47:04 by iahromi           #+#    #+#             */
-/*   Updated: 2024/11/14 13:55:41 by iahromi          ###   ########.fr       */
+/*   Updated: 2024/11/16 14:18:12 by iahromi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+int     ft_isspace(int c);
 
 int	ft_atoi(const char *str)
 {

@@ -6,7 +6,7 @@
 /*   By: iahromi <iahromi@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 12:36:36 by iahromi           #+#    #+#             */
-/*   Updated: 2024/11/16 12:45:19 by iahromi          ###   ########.fr       */
+/*   Updated: 2024/11/16 14:29:37 by iahromi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	unsigned int	i;
-	unsigned char	*result;
+	int	i;
+	char	*result;
 
 	result = malloc((ft_strlen(s) + 1) * sizeof(char));
 	if (!result)

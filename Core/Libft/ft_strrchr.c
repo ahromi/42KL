@@ -6,7 +6,7 @@
 /*   By: iahromi <iahromi@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 15:36:06 by iahromi           #+#    #+#             */
-/*   Updated: 2024/11/14 14:14:35 by iahromi          ###   ########.fr       */
+/*   Updated: 2024/11/16 14:08:15 by iahromi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strrchr(const char *str, int c)
 {
-	unsigned int	i;
-	unsigned char	cc;
-	unsigned char	*result;
+	int	i;
+	char	cc;
+	char	*result;
 
 	i = 0;
 	cc = (char) c;

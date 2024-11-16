@@ -6,7 +6,7 @@
 /*   By: iahromi <iahromi@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 14:02:10 by iahromi           #+#    #+#             */
-/*   Updated: 2024/11/12 14:47:46 by iahromi          ###   ########.fr       */
+/*   Updated: 2024/11/16 14:06:48 by iahromi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size_dst)
 	{
 		ft_memcpy(dst, src, len_src +1);
 	}
-	else if (dst_size != 0)
+	else if (size_dst != 0)
 	{
 		ft_memcpy(dst, src, size_dst - 1);
 		dst[size_dst - 1] = 0;

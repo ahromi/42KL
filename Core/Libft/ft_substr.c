@@ -6,7 +6,7 @@
 /*   By: iahromi <iahromi@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 12:04:34 by iahromi           #+#    #+#             */
-/*   Updated: 2024/11/15 12:44:17 by iahromi          ###   ########.fr       */
+/*   Updated: 2024/11/16 14:22:58 by iahromi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,22 +15,23 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
+	size_t	j;
 	char	*str;
 
-	if (!s)
-		return (NULL);
-	if (start > ft_strlen(s))
-		return (ft_strdup(""));
-	if (len > ft_strlen(s + start))
-		len = ft_strlen(s + start);
-	str = ft_calloc(len + 1, sizeof(char));
-	if (!str)
+	str = (char *)malloc(sizeof(*s) * (len + 1));
+	if (str == 0)
 		return (NULL);
 	i = 0;
-	while (i < len)
+	j = 0;
+	while (s[i])
 	{
-		str[i] = s[start + i];
+		if (i >= start && j < len)
+		{
+			str[j] = s[i];
+			j++;
+		}
 		i++;
 	}
+	str[j] = 0;
 	return (str);
 }
