@@ -6,7 +6,7 @@
 /*   By: iahromi <iahromi@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 18:26:43 by iahromi           #+#    #+#             */
-/*   Updated: 2024/11/16 18:37:08 by iahromi          ###   ########.fr       */
+/*   Updated: 2024/11/17 12:57:56 by iahromi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,9 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 	t_list	*tmp;
 
 	tmp = lst;
-	if (!lst || !f)
-		return ;
 	while (tmp)
 	{
-		(*f)(lst->content);
+		f(tmp->content);
 		tmp = tmp->next;
 	}
 }

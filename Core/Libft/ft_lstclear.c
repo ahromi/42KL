@@ -6,7 +6,7 @@
 /*   By: iahromi <iahromi@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 18:16:18 by iahromi           #+#    #+#             */
-/*   Updated: 2024/11/16 18:22:35 by iahromi          ###   ########.fr       */
+/*   Updated: 2024/11/16 19:32:29 by iahromi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	t_list	*temp;
 	t_list	*to_free;
 
-	if (!lst || !new)
+	if (!lst)
 		return ;
 	temp = *lst;
 	while (temp)

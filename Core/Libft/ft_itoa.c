@@ -29,37 +29,35 @@ static unsigned int	ft_number_size(int number)
 	return (len);
 }
 
+static unsigned int	ft_abs(int n)
+{
+	if (n < 0)
+		return ((unsigned int)(-n));
+	return ((unsigned int)n);
+}
+
 char	*ft_itoa(int n)
 {
-	char	*str;
 	unsigned int	number;
-	unsigned int	len;
+	int				len;
+	char			*str;
 
 	if (n == -2147483648)
-		return ft_strdup("-2147483648");
+		return (ft_strdup("-2147483648"));
+	number = ft_abs(n);
 	len = ft_number_size(n);
 	str = (char *)malloc(sizeof(char) * (len + 1));
-	if (str == NULL)
+	if (!str)
 		return (NULL);
 	if (n < 0)
-	{
 		str[0] = '-';
-		number = -n;
-	}
-	else
-		number = n;
-	if (number == 0)
-	{
-		str[0] = '0';
-		str[1] = '\0';
-		return (str);
-	}
 	str[len] = '\0';
+	if (number == 0)
+		str[0] = '0';
 	while (number != 0)
 	{
-		str[len - 1] = (number % 10) + '0';
+		str[--len] = (number % 10) + '0';
 		number /= 10;
-		len--;
 	}
 	return (str);
 }

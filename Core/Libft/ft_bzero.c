@@ -6,7 +6,7 @@
 /*   By: iahromi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 11:43:43 by iahromi           #+#    #+#             */
-/*   Updated: 2024/11/12 14:49:44 by iahromi          ###   ########.fr       */
+/*   Updated: 2024/11/19 12:31:29 by iahromi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,6 @@ void	ft_bzero(void *x, size_t len)
 	char	*tmp;
 
 	tmp = (char *) x;
-	while (len > 0)
-	{
-		*(tmp++) = 0;
-		len--;
-	}
+	while (len--)
+		*tmp++ = 0;
 }

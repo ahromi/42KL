@@ -19,7 +19,7 @@ t_list	*ft_lstlast(t_list *lst)
 	if (!lst)
 		return (0);
 	last = lst;
-	if(lst->next)
+	if (lst->next)
 		last = ft_lstlast(lst->next);
 	return (last);
 }

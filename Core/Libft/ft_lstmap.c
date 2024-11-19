@@ -6,7 +6,7 @@
 /*   By: iahromi <iahromi@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 18:39:43 by iahromi           #+#    #+#             */
-/*   Updated: 2024/11/16 18:57:44 by iahromi          ###   ########.fr       */
+/*   Updated: 2024/11/16 19:31:36 by iahromi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	**tmp;
 	t_list	*result;
-	int	i;
-	int	len;
+	int		i;
+	int		len;
 
 	if (!lst || !f || !del)
 		return ((void *)0);
@@ -32,7 +32,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		if (i != 0)
 			tmp[i - 1]->next = tmp[i];
 		i++;
-		lst = lst->next
+		lst = lst->next;
 	}
 	result = *tmp;
 	del(tmp);
